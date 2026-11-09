@@ -27,6 +27,7 @@
       color: var(--text);
       line-height: 1.7;
     }
+    :where(a:any-link, button):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
     /* ── NAVBAR ── */
     .navbar {
@@ -420,12 +421,13 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar">
+<header><nav class="navbar" aria-label="Primary">
   <div class="nav-container">
     <a href="index.html" class="nav-brand">DiReMe IMS</a>
     <div class="nav-links">
-      <a href="index.html" class="active">Overview & About</a>
+      <a href="index.html" class="active" aria-current="page">Overview &amp; About</a>
       <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
     </div>
   </div>
 </nav>
@@ -443,8 +445,10 @@
   <div class="badge">Zero Trust Architecture · On-Device AI · Multi-Branch Ready</div>
 </div>
 
+</header>
+
 <!-- CONTENT -->
-<div class="container">
+<main class="container">
 
   <!-- 1. App Overview -->
   <div class="section">
@@ -542,11 +546,11 @@
         <div class="contact-email">renz.amorganda@sccpag.edu.ph</div>
         <div class="contact-note">DiReMe IMS Development Team · Saint Columban College</div>
       </div>
-      <a href="privacy.html" class="btn-link">Read Privacy Policy →</a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;"><a href="privacy.html" class="btn-link">Privacy Policy →</a><a href="terms.html" class="btn-link">Terms of Service →</a></div>
     </div>
   </div>
 
-</div>
+</main>
 
 <!-- FOOTER -->
 <footer>

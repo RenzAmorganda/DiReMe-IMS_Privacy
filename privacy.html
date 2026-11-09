@@ -27,6 +27,7 @@
       color: var(--text);
       line-height: 1.7;
     }
+    :where(a:any-link, button):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
     /* ── NAVBAR ── */
     .navbar {
@@ -378,12 +379,13 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar">
+<header><nav class="navbar" aria-label="Primary">
   <div class="nav-container">
     <a href="index.html" class="nav-brand">DiReMe IMS</a>
     <div class="nav-links">
-      <a href="index.html">Overview & About</a>
-      <a href="privacy.html" class="active">Privacy Policy</a>
+      <a href="index.html">Overview &amp; About</a>
+      <a href="privacy.html" class="active" aria-current="page">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
     </div>
   </div>
 </nav>
@@ -401,8 +403,10 @@
   <div class="badge">Zero Trust Architecture · Firebase Secured</div>
 </div>
 
+</header>
+
 <!-- CONTENT -->
-<div class="container">
+<main class="container">
 
   <div class="last-updated">
     <div class="dot"></div>
@@ -546,7 +550,7 @@
     </div>
   </div>
 
-</div>
+</main>
 
 <!-- FOOTER -->
 <footer>
